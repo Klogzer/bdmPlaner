@@ -3,11 +3,17 @@
 include '../includes/mysqlDB.php';
 class family
 {
-    public $name;
-    public $character;
+    private $id;
+    private $name;
+    private $character = [];
 
-    public function dbGetFamily(){
-        $sql = "SELECT * FROM family WHERE user_id = '$_SESSION[session_id]'";
-        return this;
+    function __construct($id,$name,$character) {
+        $this->name = $name;
+        $this->character=$character;
     }
+
+    public function addchar($char){
+        array_push($this->character,$char);
+    }
+
 }
