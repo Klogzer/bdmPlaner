@@ -1,11 +1,12 @@
 <?php
 // Sitzung starten, damit der Benutzer eingeloggt bleibt
 session_start();
+include_once '../dbhandler/mysqlDB.php';
+
 
 if (isset($_POST['submit'])) {
 
-    include 'mysqlDB.php';
-
+    $connection = db();
     $user = mysqli_real_escape_string($connection, $_POST['user']);
     $password = mysqli_real_escape_string($connection, $_POST['password']);
     // Error handlers
@@ -29,10 +30,10 @@ if (isset($_POST['submit'])) {
                 header("Location: ../index.php?login=password");
                 exit();
                 // elseif fängt unvorhergesehene Fehler ab
-            } elseif($hashedPassword == true){
+            } elseif ($hashedPassword == true) {
                 // Benutzer anmelden
-                $_SESSION['session_id'] = $row['id'];
-                $_SESSION['session_user'] = $row['username'];
+                $_SESSION['user_id'] = $row['id'];
+                $_SESSION['user_name'] = $row['username'];
                 header("Location: ../dashboard.php");
                 exit();
             }

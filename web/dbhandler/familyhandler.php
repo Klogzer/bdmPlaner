@@ -1,24 +1,35 @@
 <?php
-include "../classes/family.php";
+include_once 'mysqlDB.php';
+include 'characterhandler.php';
+include 'family.php';
 
 class familyhandler
 {
 
-
-    private $connection;
-
-    function __construct(mysqli $connection) {
-        $this->connection = $connection;
-    }
-
-    function getFamilyByUserID($userid){
+    static function getFamilyByUserID($userid): family
+    {
         $sql = "SELECT * FROM family WHERE user_id = '$userid'";
-        $result = $this -> connection -> query($sql);
+        $result = mysqli_query(db(), $sql);
         $row = mysqli_fetch_assoc($result);
         $famid = $row['id'];
-        return new family($famid,$row['name'],$characterhandler->getCharsByFamID($famid));
+        $characters = characterhandler::getCharsByFamID($famid);
+
+        return new family($famid, $row['name'], $characters);
     }
 
+    // restriction only one family per user
+    static function createFamiliy($userid, $famname): void
+    {
+        $famname = mysqli_real_escape_string(db(), $famname);
+        $sql = "INSERT INTO family (name,user_id) VALUES ('$famname','$userid');";
+        $result = mysqli_query(db(), $sql);
+    }
+
+    function getFamily($userid, $famname): family
+    {
+
+    }
 
 
 }
+

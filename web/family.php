@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <html lang='de'>
 <head>
     <title>Registrieren</title>
@@ -5,9 +9,10 @@
 <body>
 
 <?php
-
-session_start();
-if (isset($_SESSION['session_user'])) {
+include 'dbhandler/familyhandler.php';
+$family = familyhandler::getFamilyByUserID($_SESSION['user_id']);
+echo $family;
+if (isset($_SESSION['user_id'])) {
     echo "<h1>Neue Familie!</h1>
 <form action=\"includes/register_family.php\" method=\"POST\">
     <input type=\"text\" name=\"familyname\" placeholder=\"Familienname\"><br>
@@ -16,7 +21,7 @@ if (isset($_SESSION['session_user'])) {
 ";
 } else {
 // Ist keine Session aktiv, kommt diese Anzeige:
-    header("Location: ../index.php");
+    header("Location: index.php");
 };
 ?>
 </body>

@@ -4,10 +4,10 @@
 if (isset($_POST['submit'])) {
 
 // Hier laden wir unsere Verbindung zur Datenbank
-    include_once 'mysqlDB.php';
-
+    include_once '../dbhandler/mysqlDB.php';
 // mysqli_real_escape_string sorgt dafür, dass nur Text,
 // aber kein Code in die Datenbank kommt
+    $connection = db();
     $user = mysqli_real_escape_string($connection, $_POST['user']);
     $password = mysqli_real_escape_string($connection, $_POST['password']);
 
@@ -17,8 +17,6 @@ if (isset($_POST['submit'])) {
 // Jetzt wird der Nutzer in die Datenbank übertragen
     $sql = "INSERT INTO user (username, pw_hash) VALUES ('$user', '$hashPassword');";
     $result = mysqli_query($connection, $sql);
-// Der User wird bei einem erfolgreichen Prozess auf
-// die später noch erstellte Seite dashboard.php geschickt
     header("Location: ../dashboard.php");
     exit();
 

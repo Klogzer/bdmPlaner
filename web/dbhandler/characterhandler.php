@@ -1,18 +1,18 @@
 <?php
-
+include_once 'mysqlDB.php';
+include 'character.php';
 
 class characterhandler
 {
-    private $connection;
-
-    function __construct(mysqli $connection) {
-        $this->connection = $connection;
-    }
-    function getCharsByFamID($famid){
+    static function getCharsByFamID($famid): array
+    {
         $characters = [];
         $sql = "SELECT * FROM `character` WHERE family_id = '$famid'";
-        $result = $this -> connection -> query($sql);
-
+        $result = db()->query($sql);
+        while ($row = mysqli_fetch_array($result)) {
+            array_push($characters, new character($row['id'], $row['name'], $row['class'], $row['lvl']));
+        }
+        // return an array of characters
         return $characters;
     }
 }
