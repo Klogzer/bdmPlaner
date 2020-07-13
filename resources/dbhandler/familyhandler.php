@@ -1,7 +1,7 @@
 <?php
-include_once 'mysqlDB.php';
+
 include 'characterhandler.php';
-include 'family.php';
+include res."/config/config.php";
 
 class familyhandler
 {

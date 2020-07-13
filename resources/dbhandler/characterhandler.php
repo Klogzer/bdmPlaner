@@ -1,5 +1,4 @@
 <?php
-include_once 'mysqlDB.php';
 include 'character.php';
 
 class characterhandler

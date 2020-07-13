@@ -1,11 +1,8 @@
 <?php
-// Sitzung starten, damit der Benutzer eingeloggt bleibt
-session_start();
-include_once '../dbhandler/mysqlDB.php';
-
+// include of db
 
 if (isset($_POST['submit'])) {
-
+    require_once "../config/config.php";
     $connection = db();
     $user = mysqli_real_escape_string($connection, $_POST['user']);
     $password = mysqli_real_escape_string($connection, $_POST['password']);
@@ -34,7 +31,7 @@ if (isset($_POST['submit'])) {
                 // Benutzer anmelden
                 $_SESSION['user_id'] = $row['id'];
                 $_SESSION['user_name'] = $row['username'];
-                header("Location: ../dashboard.php");
+                header("Location: ../../web/ddd.php");
                 exit();
             }
         }

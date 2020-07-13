@@ -1,12 +1,11 @@
 <?php
+
 // IF-Abfrage, damit kein Inhalt angezeigt wird,
 // wenn ein User die URL errät
 if (isset($_POST['submit'])) {
+    require_once "../config/config.php";
 
-// Hier laden wir unsere Verbindung zur Datenbank
-    include_once '../dbhandler/mysqlDB.php';
-// mysqli_real_escape_string sorgt dafür, dass nur Text,
-// aber kein Code in die Datenbank kommt
+
     $connection = db();
     $user = mysqli_real_escape_string($connection, $_POST['user']);
     $password = mysqli_real_escape_string($connection, $_POST['password']);
