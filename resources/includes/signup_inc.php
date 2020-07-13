@@ -24,6 +24,6 @@ if (isset($_POST['submit'])) {
 } else {
 // Falls jemand die URL erraten hat, wird er durch
 // das else zum Registrierungsformular geschickt
-    header("Location: ../signup.php");
+    header("Location: ../signup.html");
     exit();
 }

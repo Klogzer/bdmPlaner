@@ -7,6 +7,9 @@ session_start();
     <title>Dashboard</title>
 </head>
 <body>
+<div class="header">
+    <?php include 'header.php';?>
+</div>
 <h1>Dashboard I</h1>
 
 <?php
@@ -23,11 +26,14 @@ if (isset($_SESSION['user_id'])) {
 ?>
 <br>
 <!-- Hier binden wir einen Logout-Button ein -->
-<form action="includes/logout_inc.php" method="POST">
+<form action="../resources/includes/logout_inc.php" method="POST">
     <button type="submit" name="submit">Ausloggen</button>
 </form>
 <br>
 <a href="family.php">Seite II</a>
 
+<div class="footer">
+    <?php include 'footer.php';?>
+</div>
 </body>
 </html>

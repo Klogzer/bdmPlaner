@@ -25,10 +25,6 @@ class familyhandler
         $result = mysqli_query(db(), $sql);
     }
 
-    function getFamily($userid, $famname): family
-    {
-
-    }
 
 
 }
