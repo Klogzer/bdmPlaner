@@ -20,7 +20,7 @@ if (isset($_SESSION['user_id'])) {
 } else {
 // Ist keine Session aktiv, kommt diese Anzeige:
     echo "<h2>Du bist nicht angemeldet</h2>";
-    header("Location: index.php");
+    header("Location:");
 }
 
 ?>

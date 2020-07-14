@@ -7,7 +7,9 @@
 
 
 // fallback to directory "/" if attribute isnt set
-$request = $_GET["p"] ?? "/";
+$request = $_SERVER['REQUEST_URI'];
+$url = explode('/',$request);
+$request = end($url);
 if (isset($_SESSION['user_id'])) {
     // restricted Area
     // User is logged in
