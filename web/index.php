@@ -4,8 +4,8 @@ session_start();
 ?>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="styles/style.css">
-    <script type="text/javascript" src="js/register_login.js"></script>
+    <link rel="stylesheet" type="text/css" href="/BDMplaner/web/styles/style.css">
+    <script type="text/javascript" src="/BDMplaner/web/js/register_login.js"></script>
     <title>Login</title>
 </head>
 <div class="header">

@@ -19,19 +19,26 @@ if (isset($_SESSION['user_id'])) {
             require "../web/view/family.php";
             break;
     }
+    switch ($request) {
+        case
+        'family' :
+            require "../web/view/family.php";
+            break;
+    }
+    // charakter needs addition for the charakter
+    switch ($request) {
+        case
+        'character' :
+            require "../web/view/family.php";
+            break;
+    }
 } else {
     // nonrestricted
     switch ($request) {
-        case "/" :
-            require "../web/view/frontpage.php";
-            break;
-        case "" :
-            require "../web/view/frontpage.php";
-            break;
         case "home" :
             require "../web/view/frontpage.php";
             break;
-
+        // not realy needed due to htaccess always routing to index
         default:
             http_response_code(404);
             require "../web/view/404.php";
