@@ -1,6 +1,5 @@
 <?php
-// include of db
-
+session_start();
 if (isset($_POST['submit'])) {
     require_once "../config/config.php";
     $connection = db();
@@ -12,9 +11,9 @@ if (isset($_POST['submit'])) {
     $result = mysqli_query($connection, $sql);
     // mysqli_num_rows gibt die Anzahl an, wie oft die Bedingung von $sql erfüllt wird
     $resultCheck = mysqli_num_rows($result);
-    if ($result < 1) {
+    if ($resultCheck < 1) {
         // ?login=user gibt die Information an die index.php weiter
-        header("Location: ../index.php?login=user");
+        header("Location: /index.php?login=password");
         exit();
     } else {
         // Ist das Passwort korrekt?
@@ -24,20 +23,20 @@ if (isset($_POST['submit'])) {
             // password_verify($password, $row['password']) gibt true oder false zurück
             $hashedPassword = password_verify($password, $row['pw_hash']);
             if ($hashedPassword == false) {
-                header("Location: ../index.php?login=password");
+                header("Location: /index.php?login=password");
                 exit();
                 // elseif fängt unvorhergesehene Fehler ab
             } elseif ($hashedPassword == true) {
                 // Benutzer anmelden
                 $_SESSION['user_id'] = $row['id'];
                 $_SESSION['user_name'] = $row['username'];
-                header("Location: ../../web/index.php?p=frontpage");
+                header("Location: ../../family");
                 exit();
             }
         }
     }
 
 } else {
-    header("Location: ../index.php?login=error");
+    header("Location: /index.php?login=error");
     exit();
 }

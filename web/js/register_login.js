@@ -6,5 +6,7 @@ function showLogin() {
 function showRegister() {
     document.getElementById("login").style.display = 'none';
     document.getElementById("register").style.display = 'block';
-
+}
+function logout(){
+    document.getElementById("logout").submit();
 }

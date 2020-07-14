@@ -1,5 +1,4 @@
 <?php
-
 if (isset($_POST['submit'])) {
     require_once "../config/config.php";
 // Hier laden wir unsere Verbindung zur Datenbank
@@ -14,3 +13,4 @@ if (isset($_POST['submit'])) {
     header("Location: " . web . "/dashboard.php");
     exit();
 }
+

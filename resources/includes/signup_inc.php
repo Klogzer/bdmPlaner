@@ -1,5 +1,4 @@
 <?php
-
 // IF-Abfrage, damit kein Inhalt angezeigt wird,
 // wenn ein User die URL errät
 if (isset($_POST['submit'])) {

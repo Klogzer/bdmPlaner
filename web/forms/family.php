@@ -1,7 +1,4 @@
 <?php
-session_start();
-?>
-<?php
 include 'dbhandler/familyhandler.php';
 $family = familyhandler::getFamilyByUserID($_SESSION['user_id']);
 echo $family;
