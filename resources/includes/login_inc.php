@@ -31,7 +31,7 @@ if (isset($_POST['submit'])) {
                 // Benutzer anmelden
                 $_SESSION['user_id'] = $row['id'];
                 $_SESSION['user_name'] = $row['username'];
-                header("Location: ../../web/ddd.php");
+                header("Location: ../../web/index.php?p=frontpage");
                 exit();
             }
         }

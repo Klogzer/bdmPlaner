@@ -1,7 +1,7 @@
 <div class="menu">
     <ul>
-        <li><a href="index.php">Home</a></li>
-        <li><a href="dashboard.php">Dashboard</a></li>
+        <li><a href="index.php?p=home">Home</a></li>
+        <li><a href="index.php?p=dashboard">Dashboard</a></li>
     </ul>
 </div>
 <div class="login-register-box">

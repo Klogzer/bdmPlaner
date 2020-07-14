@@ -2,7 +2,7 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="1b606744-dbe1-4951-8f10-a31493da4f83" name="Xampp Apache" url="http://localhost">
+      <webServer id="1b606744-dbe1-4951-8f10-a31493da4f83" name="Xampp Apache" url="http://localhost/BDMplaner">
         <fileTransfer mountedRoot="C:\xampp\htdocs\BDMplaner" accessType="MOUNT" port="0" />
       </webServer>
     </option>
