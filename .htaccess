@@ -2,6 +2,10 @@
 Options +FollowSymLinks
 RewriteEngine On
 # Redirect requests to index.php
+# Enforces https
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 # EXCLUDES
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule .*$ /BDMPlaner/web/index.php [NC,L,QSA]
+# Redirect request to index.php
+RewriteRule .*$ index.php [NC,L,QSA]

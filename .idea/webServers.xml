@@ -5,6 +5,13 @@
       <webServer id="1b606744-dbe1-4951-8f10-a31493da4f83" name="Xampp Apache" url="http://localhost/BDMplaner">
         <fileTransfer mountedRoot="C:\xampp\htdocs\BDMplaner" accessType="MOUNT" port="0" />
       </webServer>
+      <webServer id="180d6141-186f-45ef-8c24-47604a6f90f9" name="bdmplan.us" url="http://w016ffe5.kasserver.com">
+        <fileTransfer host="w016ffe5.kasserver.com" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>
