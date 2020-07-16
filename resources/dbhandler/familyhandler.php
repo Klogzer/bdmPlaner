@@ -7,9 +7,14 @@ class familyhandler
 {
 
     static function getFamilyByUserID($userid): family
+
+
     {
-        $sql = "SELECT * FROM family WHERE user_id = '$userid'";
-        $result = mysqli_query(db(), $sql);
+        $mysqli = db();
+        $stmt = $mysqli -> prepare("SELECT * FROM family WHERE user_id = ?");
+        $stmt->bind_param("i", $userid);
+        $stmt->execute();
+        $result = $stmt->get_result();
         $row = mysqli_fetch_assoc($result);
         $famid = $row['id'];
         $characters = characterhandler::getCharsByFamID($famid);
