@@ -24,13 +24,31 @@ class CharacterClass
     {
         switch ($type) {
             case ClassType::WARRIOR:
-                return "web/img/classIcon/warrior.png";
+                return "web/img/classIcon/WARRIOR.png";
                 break;
             case ClassType::RANGER:
-                return "web/img/classIcon/ranger.png";
+                return "web/img/classIcon/RANGER.png";
+                break;
+            case ClassType::WITCH:
+                return "web/img/classIcon/WITCH.png";
+                break;
+            case ClassType::GIANT:
+                return "web/img/classIcon/BERSERKER.png";
+                break;
+            case ClassType::SORCERESS:
+                return "web/img/classIcon/SORCERESS.png";
+                break;
+            case ClassType::VALKYRIE:
+                return "web/img/classIcon/VALKYRIE.png";
+                break;
+            case ClassType::STRIKER:
+                return "web/img/classIcon/STRIKER.png";
+                break;
+            case ClassType::DEATHKNIGHT:
+                return "web/img/classIcon/Dark-night.png";
                 break;
             default:
-                return "web/img/classIcon/default.png";
+                return "web/img/classIcon/WIZARD.png";
                 break;
 
         }
