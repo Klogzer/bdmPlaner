@@ -1,2 +1,3 @@
-<?php
-echo '<P> Dies ist eine Footer</P>';
+<div class="menu">
+
+</div>

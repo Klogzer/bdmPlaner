@@ -1,0 +1,29 @@
+<div class="newItem" id="armor" style="display: none">
+    <form action="../../../resources/includes/items/armor_inc.php" method="post">
+        <table id="armor_table">
+            <tr>
+                <td>Name</td>
+                <td>Seltenheit</td>
+                <td>AK</td>
+                <td>VK</td>
+                <td>HP</td>
+                <td>Max. Mana</td>
+                <td>Magie Reg</td>
+                <td>Geschwindigkeit</td>
+                <td>Mana Reg</td>
+            </tr>
+            <tr>
+                <td><input type="text" name="name[]"/></td>
+                <td><input type="text" name="type[]"/></td>
+                <td><input type="text" name="ap[]"/></td>
+                <td><input type="text" name="dp[]"/></td>
+                <td><input type="text" name="hp[]"/></td>
+                <td><input type="text" name="maxmana[]"/></td>
+                <td><input type="text" name="magreg[]"/></td>
+                <td><input type="text" name="movespeed[]"/></td>
+                <td><input type="text" name="manareg[]"/></td>
+            </tr>
+        </table>
+    </form>
+    <button onclick="addArmorRow()">Click me</button>
+</div>

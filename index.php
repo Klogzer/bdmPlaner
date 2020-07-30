@@ -8,10 +8,10 @@ session_start();
     <script type="text/javascript" src="web/js/register_login.js"></script>
     <title>Login</title>
 </head>
-<div class="header">
-    <?php require_once('web/header.php'); ?>
-</div>
 <body>
+<div class="header">
+    <?php require_once('web/navbar.php'); ?>
+</div>
 <div class="body">
     <?php require_once("resources/includes/router.php"); ?>
 </div>
