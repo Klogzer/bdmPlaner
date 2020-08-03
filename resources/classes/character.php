@@ -3,10 +3,10 @@
 
 class Character
 {
-    public $id;
-    public $name;
-    public $class;
-    public $lvl;
+    private $id;
+    private $name;
+    private $class;
+    private $lvl;
     private $weapon;
     private $offhand;
     private $helmet;
@@ -22,6 +22,31 @@ class Character
     private $relic = array("","");
     private $weaponskin;
     private $costume;
+
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getClass()
+    {
+        return $this->class;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLvl()
+    {
+        return $this->lvl;
+    }
+
 
 
 
@@ -171,5 +196,8 @@ class Character
     public function getName(){
         return $this->name;
     }
+
+
+
 
 }
