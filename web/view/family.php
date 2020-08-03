@@ -22,7 +22,7 @@ if (!isset($_COOKIE['BDMPlaner'])) {
             ?>
 
             <div class="inneBox" id="nameofChar">
-                <form action="resources/includes/delete_inc.php" method="post">
+                <form action="resources/includes/delete_character.php" method="post">
                     <input type="hidden" id="charName" name="charName" value="<?php echo $character->getName(); ?>">
                     <button type="submit" name="submit">Löschen</button>
                 </form>

@@ -42,20 +42,36 @@ class family
             $this->addCharacter($char);
         }
     }
-
+    // return true if successfull
+    // return false if unsuccessfull
     public function addCharacter(character $char)
     {
-        array_push($this->characters, $char);
+        if (!$this->getCharByName($char->getName())) {
+            array_push($this->characters, $char);
+            return true;
+        }
+        return false;
     }
 
 
-    // its work but why can i lookup character objects but just looking fo a string
+    // return true if a character was deleted
+    // returns false if noch character was deleted
     public function removeCharacter($char)
     {
-        $index = array_search($char, $this->characters);
-        array_splice($this->characters, $index, 1);
+        foreach ($this->characters as $key => $compareChar) {
+
+            if ($char->getName() == $compareChar->getName()) {
+
+                array_splice($this->characters, $key, 1);
+               return true;
+            }
+        }
+        return false;
+
     }
 
+
+    // returns object when found or false if not found
     public function getCharByName($name)
     {
         foreach ($this->characters as $key => $char) {
@@ -63,6 +79,7 @@ class family
                 return $this->characters[$key];
             }
         }
+        return false;
     }
 
     public function __toString()
@@ -71,7 +88,7 @@ class family
         foreach ($this->characters as $character) {
             $s = sprintf("%s%s", $s, $character->name);
         }
-        return sprintf('NAME: %s,%s',$this->name, $s);
+        return sprintf('NAME: %s,%s', $this->name, $s);
     }
 
     public function getCharacters(): array

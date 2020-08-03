@@ -6,16 +6,15 @@ include $_SERVER['DOCUMENT_ROOT'].'/BDMPlaner/resources/classes/CharacterClass.p
 include $_SERVER['DOCUMENT_ROOT'].'/BDMPlaner/resources/classes/family.php';
 include $_SERVER['DOCUMENT_ROOT'].'/BDMPlaner/resources/classes/character.php';
 if (isset($_POST['submit'])) {
-
-    // mopck data
-    /**
-    $fam = new family( "Kloggzer");
-    $baba = new Character(1, "Baba", ClassType::RANGER, 60);
-    $ali = new Character(2, "Ali", ClassType::DEATHKNIGHT, 60);
-    $chris = new Character(3, "Chris", ClassType::STRIKER, 58);
-    $fam->addCharacters([$ali, $baba, $chris]);
-         **/
-    $fam = new Family( htmlspecialchars($_POST['familyname']));
+    // create char
+    $name = htmlspecialchars($_POST['characterName']);
+    $class = htmlspecialchars($_POST['characterClass']);
+    $level = htmlspecialchars($_POST['characterLevel']);
+    $char = new Character($name,$class,$level);
+    // unserialize family and add char, serialize it again
+    /* @var $fam family */
+    $fam = unserialize($_COOKIE['BDMPlaner']);
+    $fam -> addCharacter($char);
     $str = serialize($fam);
     setcookie('BDMPlaner', $str, time() + (86400 * 30), '/');
 

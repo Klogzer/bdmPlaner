@@ -57,9 +57,8 @@ class Character
      * @param $class
      * @param $lvl
      */
-    public function __construct($id, $name, $class, $lvl)
+    public function __construct($name, $class, $lvl)
     {
-        $this->id = $id;
         $this->name = $name;
         $this->class = $class;
         $this->lvl = $lvl;

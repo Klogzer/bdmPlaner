@@ -5,7 +5,6 @@ session_start();
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="web/styles/style.css">
-    <script type="text/javascript" src="web/js/register_login.js"></script>
     <title>Login</title>
 </head>
 <body>
