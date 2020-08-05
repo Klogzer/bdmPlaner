@@ -1,8 +1,8 @@
 <?php
 session_start();
-include $_SERVER['DOCUMENT_ROOT'].'/BDMPlaner/resources/classes/CharacterClass.php';
-include $_SERVER['DOCUMENT_ROOT'].'/BDMPlaner/resources/classes/Family.php';
-include $_SERVER['DOCUMENT_ROOT'].'/BDMPlaner/resources/classes/Character.php';
+include '../classes/CharacterClass.php';
+include '../classes/Family.php';
+include '../classes/Character.php';
 if (isset($_POST['submit'])) {
     // unserialize family and delete char, serialize it again
     /* @var $fam family */
@@ -51,4 +51,5 @@ if (isset($_POST['submit'])) {
     $_SESSION['BDMPlaner'] = serialize($fam);
     }
 header("Location: ../../family");
+exit();
 

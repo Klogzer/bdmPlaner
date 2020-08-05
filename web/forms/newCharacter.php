@@ -1,5 +1,5 @@
 <?php include_once 'resources/classes/JsonHandler.php';?>
-<form action="/BDMplaner/resources/includes/register_character.php" method="POST">
+<form action="resources/includes/register_character.php" method="POST">
     <input type="text" name="characterName" placeholder="cName">
     <select name="characterClass">
         <?php
