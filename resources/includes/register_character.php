@@ -3,8 +3,9 @@
 
 <?php
 include $_SERVER['DOCUMENT_ROOT'].'/BDMPlaner/resources/classes/CharacterClass.php';
-include $_SERVER['DOCUMENT_ROOT'].'/BDMPlaner/resources/classes/family.php';
-include $_SERVER['DOCUMENT_ROOT'].'/BDMPlaner/resources/classes/character.php';
+include $_SERVER['DOCUMENT_ROOT'].'/BDMPlaner/resources/classes/Family.php';
+include $_SERVER['DOCUMENT_ROOT'].'/BDMPlaner/resources/classes/Character.php';
+session_start();
 if (isset($_POST['submit'])) {
     // create char
     $name = htmlspecialchars($_POST['characterName']);
@@ -13,11 +14,10 @@ if (isset($_POST['submit'])) {
     $char = new Character($name,$class,$level);
     // unserialize family and add char, serialize it again
     /* @var $fam family */
-    $fam = unserialize($_COOKIE['BDMPlaner']);
+    $fam = unserialize($_SESSION['BDMPlaner']);
     $fam -> addCharacter($char);
     $str = serialize($fam);
-    setcookie('BDMPlaner', $str, time() + (86400 * 30), '/');
-
+    $_SESSION['BDMPlaner'] = serialize($fam);
     header("Location: ../../family");
     exit();
 

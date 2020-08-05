@@ -1,0 +1,16 @@
+{
+  "array": [
+    {
+      "name": "Orange",
+      "type": "Orange",
+      "ad": 10,
+      "dp": 10
+    },
+    {
+      "name": "Yellow",
+      "type": "Yellow",
+      "ad": 10,
+      "dp": 10
+    }
+  ]
+}

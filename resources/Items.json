@@ -1,0 +1,98 @@
+{
+  "weapons": [
+    {
+      "name": "Liverto",
+      "type": "Orange",
+      "slots": 2,
+      "ad": 10,
+      "dp": 10
+    },
+    {
+      "name": "Jin Liverto",
+      "type": "Orange",
+      "slots": 3,
+      "ad": 10,
+      "dp": 10
+    }
+  ],
+  "offhand": [
+    {
+      "name": "Rosa",
+      "type": "Orange",
+      "slots": 2,
+      "ad": 10,
+      "dp": 10
+    },
+    {
+      "name": "Jin Rosar",
+      "type": "Orange",
+      "slots": 3,
+      "ad": 10,
+      "dp": 10
+    }
+  ],
+  "armor": [
+    {
+      "name": "Grunil",
+      "type": "Orange",
+      "slots": 2,
+      "ad": 10,
+      "dp": 10
+    },
+    {
+      "name": "Jin Grunil",
+      "type": "Orange",
+      "slots": 3,
+      "ad": 10,
+      "dp": 10
+    }
+  ],
+  "gloves": [
+    {
+      "name": "Grunil",
+      "type": "Orange",
+      "slots": 2,
+      "ad": 10,
+      "dp": 10
+    },
+    {
+      "name": "Jin Grunil",
+      "type": "Orange",
+      "slots": 3,
+      "ad": 10,
+      "dp": 10
+    }
+  ],
+  "boots": [
+    {
+      "name": "Grunil",
+      "type": "Orange",
+      "slots": 2,
+      "ad": 10,
+      "dp": 10
+    },
+    {
+      "name": "Jin Grunil",
+      "type": "Orange",
+      "slots": 3,
+      "ad": 10,
+      "dp": 10
+    }
+  ],
+  "helmet": [
+    {
+      "name": "Grunil",
+      "type": "Orange",
+      "slots": 2,
+      "ad": 10,
+      "dp": 10
+    },
+    {
+      "name": "Jin Grunil",
+      "type": "Orange",
+      "slots": 3,
+      "ad": 10,
+      "dp": 10
+    }
+  ]
+}

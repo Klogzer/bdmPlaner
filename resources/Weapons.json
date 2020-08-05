@@ -1,0 +1,18 @@
+{
+  "array": [
+    {
+      "name": "Liverto",
+      "type": "Orange",
+      "slots": 2,
+      "ad": 10,
+      "dp": 10
+    },
+    {
+      "name": "Jin Liverto",
+      "type": "Orange",
+      "slots": 3,
+      "ad": 10,
+      "dp": 10
+    }
+  ]
+}

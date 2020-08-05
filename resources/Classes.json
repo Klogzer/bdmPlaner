@@ -1,0 +1,28 @@
+{
+  "array": [
+    {
+      "name": "Warrior"
+    },
+    {
+      "name": "Ranger"
+    },
+    {
+      "name": "Witch"
+    },
+    {
+      "name": "Giant"
+    },
+    {
+      "name": "Sorceress"
+    },
+    {
+      "name": "Valkyrie"
+    },
+    {
+      "name": "Striker"
+    },
+    {
+      "name": "Darkknight"
+    }
+  ]
+}

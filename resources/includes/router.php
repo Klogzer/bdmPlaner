@@ -1,5 +1,4 @@
 <?php
-
 // wanted behaviour:
 // opens link gets content, or an error page accordingly(404, 401...)
 // current behaviour:
@@ -19,10 +18,16 @@ switch ($request) {
     // charakter needs addition for the charakter
     case
     'character' :
-        require "web/view/character.php";
+        require "web/view/Character.php";
         break;
     case "home" :
         require "web/view/frontpage.php";
+        break;
+    case "" :
+        require "web/view/frontpage.php";
+        break;
+    case "editCharacter" :
+        require "web/view/editCharacter.php";
         break;
     default  :
         require "web/view/404.php";

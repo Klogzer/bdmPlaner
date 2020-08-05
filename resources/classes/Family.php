@@ -95,7 +95,14 @@ class family
     {
         return $this->characters;
     }
-
+    public function getCharacterNames(): array
+    {
+        $arr=[];
+        foreach ($this->characters as $character){
+            array_push($arr,$character->getName());
+        }
+        return $arr;
+    }
     /**
      * @return mixed
      */
